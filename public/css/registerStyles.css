@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: montserrat;
+}
+.register{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
