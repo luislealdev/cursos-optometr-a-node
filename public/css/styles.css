@@ -49,6 +49,17 @@ body {
   font-family: "Playfair Display", Arial, serif;
 }
 
+.center-father {
+  position: relative;
+}
+
+.center-son {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*NAVBAR*/
 #myNavbar {
   background-color: black;
@@ -57,12 +68,14 @@ body {
 #myNavbar img {
   height: m;
 }
-#mySidebar a{
-  font-size:x-large;
+
+#mySidebar a {
+  font-size: x-large;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#mySidebar hr{
+
+#mySidebar hr {
   color: whitesmoke;
 }
 
@@ -73,7 +86,8 @@ body {
   margin-top: 1.5%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.button-openNavbar{
+
+.button-openNavbar {
   margin-top: 3%;
   color: white;
 }
@@ -212,6 +226,65 @@ body {
 .galery img {
   width: 100%;
 }
+
+/*BANNER*/
+.banner {
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 15px ;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.banner input {
+  font-size: 40px;
+  width: 70%;
+  text-align: center;
+}
+
+.big-text {
+  font-size: 100px;
+  font-weight: 800;
+  animation-delay: 1s;
+}
+
+.banner a {
+  display: inline-block;
+  background: #fff;
+  color: #36465d;
+  text-transform: uppercase;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 25px;
+  transition: .3s;
+  margin-top: 2vh;
+}
+
+.banner a:hover {
+  background: #333;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+@media (max-width: 1138px) {
+  .big-text{
+    font-size: 30px;
+  }
+  .banner input{
+    width: 90%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .banner a{
+    font-size: 15px;
+  }
+}
+
+/*COURSES*/
 
 .courses {
   display: grid;
