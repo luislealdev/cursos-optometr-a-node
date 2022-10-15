@@ -37,11 +37,11 @@
             </a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small">
-                <a href="#about" class="w3-bar-item w3-button">Inicio</a>
-                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Coaching</a>
+                <a href="#home" class="w3-bar-item w3-button">Inicio</a>
+                <a href="#coaching" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Coaching</a>
                 <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Historias de éxito</a>
-                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Cursos</a>
-                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Rodcast</a>
+                <a href="#courses" class="w3-bar-item w3-button"><i class="fa-solid fa-book"></i> Cursos</a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa-solid fa-podcast"></i> Rodcast</a>
                 <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contacto</a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -60,13 +60,13 @@
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar
             ×</a>
         <hr>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
         <hr>
-        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Coaching</a>
+        <a href="#coaching" onclick="w3_close()" class="w3-bar-item w3-button">Coaching</a>
         <hr>
         <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Historias de éxito</a>
         <hr>
-        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Cursos</a>
+        <a href="#courses" onclick="w3_close()" class="w3-bar-item w3-button">Cursos</a>
         <hr>
         <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Rodcast</a>
         <hr>
@@ -83,7 +83,7 @@
     </nav>
 
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="w3-row home-test">
             <div class="w3-half w3-container info">
                 <h3>Cuando tu profesión se convierte en tu vocación estás destinado al <span>éxito</span></h3>
@@ -106,7 +106,7 @@
             <div class="text-container">
                 <h1>Cursos de Optometría</h1>
                 <p>Preocupados por tu aprendizaje, Cursos de Optometría ha creado diferentes alternativas para tí;
-                    Formación en optometría, optometría infantil y experiencias WOW. ¿Quieres saber más?</p>
+                    Formación en optometría y experiencias WOW. ¿Quieres saber más?</p>
                 <button class="w3-btn w3-round-xxlarge w3-yellow "><a href="" class="no-hover">Conoce nuestros cursos y
                         certificaciones</a></button>
             </div>
@@ -114,7 +114,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="coaching">
         <div class="w3-row w3-margin ">
             <div class="w3-half galery ">
                 <img src="img/rod11.jpg" alt="" class="w3-round w3-padding-16">
@@ -155,45 +155,56 @@
 
     <div class="banner animated tada">
         <div class=" big-text animated tada">95% DE DESCUENTO</div>
-         <div>Registrandote ahora</div>
-           <input placeholder="miNombre@correo.com"/>
-       <br>
-         <a href="#">Registrarme</a>
-       </div>
+        <div>Registrandote ahora</div>
+        <input placeholder="miNombre@correo.com" />
+        <br>
+        <a href="#">Registrarme</a>
+    </div>
 
-    <section class="bg-whitesmoke">
+    <br>
+    <br>
+    <section class="bg-whitesmoke" id="courses">
         <div class="text-container w3-center w3-padding-16">
             <h1 class="title-text">Cursos de Optometría</h1>
         </div>
         <div class="courses">
-
-            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge">
-                <img src="img/rod-enseñando.JPG" class="w3-round img-full" alt="Rod Castañeda enseñando">
+            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge w3-center w3-row">
+                <div class="w3-half w3-padding">
+                    <img src="img/rod-enseñando.JPG" class="w3-round img-full" alt="Rod Castañeda enseñando">
+                </div>
                 <h2>Cursos de optometría</h2>
-                <p class="text-justify">Cursos de Optometría ofrece el proceso de evaluación con fines de certificación
-                    oficial CONOCER junto
-                    con el curso de alineación para todos aquellos que ya tenían un conocimiento previo de optometría.
+                <p class="text-justify">Proceso de evaluación con fines de <b>certificación</b>
+                    oficial <b>CONOCER</b>, junto
+                    con el curso de <b>alineación</b> (para todos aquellos que ya tenían un conocimiento previo de
+                    optometría).
                     <br>
-                    Así mismo se implementa un “Estándar de
-                    Competencia” cuyo objetivo general es servir como referente para la evaluación y certificación de
+                    Así mismo se implementa un <b>“Estándar de
+                        Competencia”</b> cuyo objetivo general es servir como referente para la evaluación y
+                    certificación de
                     las
                     personas que realizan exámenes de refracción en el país considerando:
-
-                    -Los antecedentes visuales del cliente
-                    -La realización de pruebas preliminares de el examen de refracción
-                    -La determinación del estado refractivo de los ojos
-                    -El ofrecimiento de alternativas de solución visual
-                    <br>
+                </p>
+                <ul class="w3-left-align">
+                    <li> Los antecedentes visuales del cliente</li>
+                    <li> La realización de pruebas preliminares de el examen de refracción</li>
+                    <li> La determinación del estado refractivo de los ojos</li>
+                    <li> El ofrecimiento de alternativas de solución visual</li>
+                </ul>
+                <p class="text-justify">
                     En Cursos de Optometría quisimos llevar nuestros estudios a otro nivel teniendo un estándar mejorado
                     con
                     grado
                     quirúrgico.
                 </p>
+
+                </p>
             </div>
-            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge">
-                <img src="/img/rod-wow.jpg" class="w3-round img-full" alt="Rod Castañeda sorprendido">
+            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge w3-center w3-row">
+                <div class="w3-half w3-padding">
+                    <img src="/img/rod-wow.jpg" class="w3-round img-full" alt="Rod Castañeda sorprendido">
+                </div>
                 <h2>Experiencia WOW</h2>
-                <p class="text-justify">La experiencia WOW es un curso exclusivo que se realiza una vez al año,
+                <p class="text-justify">Curso <b>exclusivo</b> que se realiza una vez al año,
                     orientado a todos esos
                     dueños de ópticas que buscan ser diferentes.
                     <br>
@@ -201,34 +212,58 @@
                     ofreciéndole la
                     oportunidad de quedarse en un hotel donde al ver la buena atención que recibió decidió que
                     podía llevar esa experiencia a todas las ópticas.
-                    <br>
-                    Hasta la fecha, la experiencia WOW ha tenido tan buenos resultados que los empresarios que lo han
+                    <br><br>
+                    La <b>experiencia WOW</b> ha tenido tan buenos resultados que los empresarios que lo han
                     tomado
                     han tenido un ingreso superior a lo que tenían en ventas.
-                </p>
-            </div>
-            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge">
-                <img src="img/niño-optometria.png" alt="Optometría infantil" class="w3-round img-full">
-                <h2>Optometría infantil</h2>
-                <p class="text-justify"> Este curso nace gracias a los años de experiencia que tuvo Rod Castañeda al
-                    trabajar como optometrista,
-                    atendiendo niños con ambliopía (un defecto visual que nace de un paciente que no atiende a tiempo
-                    sus problemas visuales).
-                    <br>
-                    “Como papá me gusta saber cómo voy a salvar a mis hijos” - Rod Castañeda
-                    <br>
-                    En el curso de optometría infantil se hablan sobre todas las herramientas que se necesitan para
-                    atender
-                    niños desde los 3 años en adelante.
                 </p>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="w3-half">Lol</div>
-        <div class="w3-half w3-center">ajj</div>
+        <div class="container mt-5 w3-margin-bottom">
+            <div class="text-container w3-center w3-padding-16">
+                <h1 class="title-text">Historias de éxito</h1>
+            </div>
+            <div class="row">
+                <div class="w3-third grid-30-70 w3-border w3-round-xlarge box-shadow">
+                    <div>
+                        <img src="/img/logo.png" alt="" class="img-full">
+                    </div>
+                    <div class="w3-margin">
+                        <p>"Nos ha ayudado a que nuestros clientes tengan una experiencia única, inigualable y nos
+                            empiezan a recomendar"</p>
+                        <p><b>Mónica Soía Solano</b> <br> Optometrista egresada de CDO</p>
+                    </div>
+
+                </div>
+                <div class="w3-third grid-30-70 w3-border w3-round-xlarge box-shadow">
+                    <div>
+                        <img src="/img/logo.png" alt="" class="img-full">
+                    </div>
+                    <div class="w3-margin">
+                        <p>"Nos ha ayudado a que nuestros clientes tengan una experiencia única, inigualable y nos
+                            empiezan a recomendar"</p>
+                        <p><b>Mónica Soía Solano</b> <br> Optometrista egresada de CDO</p>
+                    </div>
+
+                </div>
+                <div class="w3-third grid-30-70 w3-border w3-round-xlarge box-shadow">
+                    <div>
+                        <img src="/img/logo.png" alt="" class="img-full">
+                    </div>
+                    <div class="w3-margin">
+                        <p>"Nos ha ayudado a que nuestros clientes tengan una experiencia única, inigualable y nos
+                            empiezan a recomendar"</p>
+                        <p><b>Mónica Soía Solano</b> <br> Optometrista egresada de CDO</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
+
 
     <footer>
         <div class="w3-center">

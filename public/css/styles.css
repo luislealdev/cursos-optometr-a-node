@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +11,24 @@
 
 body {
   font-family: montserrat;
+}
+
+.box-shadow {
+  box-shadow: 10px 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-30-70 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.width-20vh {
+  width: 20vh;
 }
 
 .text-justify {
@@ -235,7 +257,7 @@ body {
   font-size: 30px;
   color: #fff;
   text-align: center;
-  padding: 10px 15px ;
+  padding: 10px 15px;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -270,16 +292,18 @@ body {
 }
 
 @media (max-width: 1138px) {
-  .big-text{
+  .big-text {
     font-size: 30px;
   }
-  .banner input{
+
+  .banner input {
     width: 90%;
     height: 40px;
     font-size: 15px;
     border-radius: 10px;
   }
-  .banner a{
+
+  .banner a {
     font-size: 15px;
   }
 }
@@ -288,8 +312,12 @@ body {
 
 .courses {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.courses img {
+  max-width: 40vw;
 }
 
 .courses h2 {
