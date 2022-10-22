@@ -49,14 +49,23 @@ app.post("/registro", (req, res) => {
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "luisrrleal@gmail.com",
+          user: "noreplaycreativa2020@gmail.com",
           pass: process.env.PASS,
         },
       });
       const name = req.body.name;
       const lastName = req.body.lastName;
       const CURP = req.body.CURP;
-      const address = req.body.address;
+      const address =
+        req.body.calle +
+        " " +
+        req.body.colinia +
+        " " +
+        req.body.cp +
+        " " +
+        req.body.ciudad +
+        " " +
+        req.body.estado;
       const phone = req.body.phone;
       const schoolar = req.body.schoolar;
       const placeBorn = req.body.placeBorn;
@@ -83,7 +92,7 @@ app.post("/registro", (req, res) => {
 
       console.log(mensaje);
       var mailOptions = {
-        from: "luisrrleal@gmail.com",
+        from: "noreplaycreativa2020@gmail.com",
         to: "visualcenter.mkt@gmail.com",
         subject: "NUEVO USUARIO",
         text: mensaje,
