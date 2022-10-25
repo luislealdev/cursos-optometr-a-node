@@ -13,6 +13,10 @@ body {
   font-family: montserrat;
 }
 
+.yellow-bg{
+  background: rgb(210, 172, 42);
+}
+
 .text-opinion {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 26px;

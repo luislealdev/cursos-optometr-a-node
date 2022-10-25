@@ -3,6 +3,7 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const multer = require("multer");
 const nodemailer = require("nodemailer");
+const https = require("https");
 
 const app = express();
 app.use(express.static("public"));
@@ -38,7 +39,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/registro", (req, res) => {
+app.post("/registro", async(req, res) => {
+
+  
+
   upload(req, res, function (err) {
     if (err) {
       console.log(err);
@@ -73,6 +77,38 @@ app.post("/registro", (req, res) => {
       const email = req.body.email;
       const date = new Date().toLocaleDateString();
 
+      //-------------MAILCHIMP-----------
+      const data = {
+        members: [
+          {
+            email_address: email,
+            status: "subscribed",
+            merge_fields: {
+              FNAME: name,
+              LNAME: lastName,
+              PHONE: phone,
+            },
+          },
+        ],
+      };
+
+      const jsonData = JSON.stringify(data);
+      const url = "https://us21.api.mailchimp.com/3.0/lists/e3fa8cc903";
+      const options = {
+        method: "POST",
+        auth: "RodRodCastaneda:27e8807cd03bc4ee8f46bc0a05cab90e-us21",
+      };
+      const request = https.request(url, options, function (response) {
+        if (response.statusCode === 200) {
+          console.log("cool");
+        } else {
+          console.log(response.statusMessage);
+        }
+        response.on("data", function (data) {});
+      });
+      request.write(jsonData);
+      request.end();
+
       var mensaje = `¡¡Hola Rod!!
           Felicidades, ${name} ${lastName} se acaba de inscribir a tu curso.
           Conoce más sobre ${name}:
@@ -90,7 +126,6 @@ app.post("/registro", (req, res) => {
           ${date}
         `;
 
-      console.log(mensaje);
       var mailOptions = {
         from: "noreplaycreativa2020@gmail.com",
         to: "visualcenter.mkt@gmail.com",
@@ -110,11 +145,13 @@ app.post("/registro", (req, res) => {
         if (error) {
           console.log(error);
         } else {
-          console.log("Email enviado: " + info.response);
+          res.sendFile(__dirname + "/registrocorrecto.html")
         }
       });
     }
   });
+
+
 });
 
 app.listen(3000, function () {
