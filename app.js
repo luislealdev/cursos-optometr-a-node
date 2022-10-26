@@ -39,13 +39,9 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/registro", async(req, res) => {
-
-  
-
+app.post("/registro", (req, res) => {
   upload(req, res, function (err) {
     if (err) {
-      console.log(err);
       return res.end("Something went wrong!");
     } else {
       path1 = req.files[0].path;
@@ -96,18 +92,11 @@ app.post("/registro", async(req, res) => {
       const url = "https://us21.api.mailchimp.com/3.0/lists/e3fa8cc903";
       const options = {
         method: "POST",
-        auth: "RodRodCastaneda:27e8807cd03bc4ee8f46bc0a05cab90e-us21",
+        auth: "RodCastaneda:9c0ae1bde5157b8d87bc3f2645be3817-us21",
       };
       const request = https.request(url, options, function (response) {
-        if (response.statusCode === 200) {
-          console.log("cool");
-        } else {
-          console.log(response.statusMessage);
-        }
         response.on("data", function (data) {});
       });
-      request.write(jsonData);
-      request.end();
 
       var mensaje = `¡¡Hola Rod!!
           Felicidades, ${name} ${lastName} se acaba de inscribir a tu curso.
@@ -128,7 +117,7 @@ app.post("/registro", async(req, res) => {
 
       var mailOptions = {
         from: "noreplaycreativa2020@gmail.com",
-        to: "visualcenter.mkt@gmail.com",
+        to: "hola@rodolfocastaneda.com",
         subject: "NUEVO USUARIO",
         text: mensaje,
         attachments: [
@@ -143,15 +132,14 @@ app.post("/registro", async(req, res) => {
 
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-          console.log(error);
         } else {
-          res.sendFile(__dirname + "/registrocorrecto.html")
+          res.sendFile(__dirname + "/registrocorrecto.html");
         }
       });
+      request.write(jsonData);
+      request.end();
     }
   });
-
-
 });
 
 app.listen(3000, function () {
