@@ -92,13 +92,27 @@ app.post("/registro", (req, res) => {
       const url = "https://us21.api.mailchimp.com/3.0/lists/e3fa8cc903";
       const options = {
         method: "POST",
-        auth: "RodCastaneda:9c0ae1bde5157b8d87bc3f2645be3817-us21",
+        auth: process.env.AUTH,
       };
       const request = https.request(url, options, function (response) {
         response.on("data", function (data) {});
       });
 
-      var mensaje = `¡¡Hola Rod!!
+      request.write(jsonData);
+      request.end();
+
+      // request.post(
+      //   {
+      //     headers: { "content-type": "application/x-www-form-urlencoded" },
+      //     url: url,
+      //     body: options,
+      //   },
+      //   function (error, response, body) {
+      //     console.log(body);
+      //   }
+      // );
+
+      const mensaje = `¡¡Hola Rod!!
           Felicidades, ${name} ${lastName} se acaba de inscribir a tu curso.
           Conoce más sobre ${name}:
           Nombre: ${name}
@@ -117,7 +131,7 @@ app.post("/registro", (req, res) => {
 
       var mailOptions = {
         from: "noreplaycreativa2020@gmail.com",
-        to: "hola@rodolfocastaneda.com",
+        to: "visualcenter.mkt@gmail.com",
         subject: "NUEVO USUARIO",
         text: mensaje,
         attachments: [
@@ -136,8 +150,6 @@ app.post("/registro", (req, res) => {
           res.sendFile(__dirname + "/registrocorrecto.html");
         }
       });
-      request.write(jsonData);
-      request.end();
     }
   });
 });
