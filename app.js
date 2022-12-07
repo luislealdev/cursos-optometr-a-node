@@ -49,7 +49,7 @@ app.post("/registro", (req, res) => {
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "luisrrleal@gmail.com",
+          user: "noreplaycreativa2020@gmail.com",
           pass: process.env.PASS,
         },
       });
@@ -81,9 +81,9 @@ app.post("/registro", (req, res) => {
           ${date}
         `;
 
-      console.log(mensaje);
+
       var mailOptions = {
-        from: "luisrrleal@gmail.com",
+        from: "noreplaycreativa2020@gmail.com",
         to: "visualcenter.mkt@gmail.com",
         subject: "NUEVO USUARIO",
         text: mensaje,
@@ -99,9 +99,9 @@ app.post("/registro", (req, res) => {
 
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-          console.log(error);
+          alert("Se ha producido un error")
         } else {
-          console.log("Email enviado: " + info.response);
+          alert("Se ha enviado correctamente el registro")
         }
       });
     }
