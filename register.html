@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -28,43 +29,31 @@
                                     <h3 class="mb-5 text-uppercase">¡Únete a la comunidad!</h3>
                                     <form action="/registro" method="POST" enctype="multipart/form-data">
                                         <div class="row">
+                                            <p class="text-opinion">Datos generales</p>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <input type="text" id="name" name="name"
+                                                    <input type="text" id="name" name="name" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="name">Nombre(s)</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <input type="text" id="lastName" name="lastName"
+                                                    <input type="text" id="lastName" name="lastName" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="lastName">Apellido(s)</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <input type="text" id="CURP" name="CURP"
+                                                    <input type="text" id="CURP" name="CURP" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="CURP">CURP</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <input type="text" id="address" name="address"
-                                                        class="form-control form-control-lg" required />
-                                                    <label class="form-label" for="address">Dirección (Calle,
-                                                        Num,
-                                                        Col, Cp, Ciudad y Estado). </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
-                                                    <input type="text" id="phone" name="phone"
+                                                    <input type="number" id="phone" name="phone" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="phone">Teléfono
                                                         celular</label>
@@ -72,17 +61,16 @@
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <input type="text" id="schoolar" name="schoolar"
+                                                    <input type="text" id="schoolar" name="schoolar" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="schoolar">Escolaridad </label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="placeBorn" name="placeBorn"
-                                                        class="form-control form-control-lg" required />
+                                                        autocomplete="off" class="form-control form-control-lg"
+                                                        required />
                                                     <label class="form-label" for="placeBorn">Lugar de
                                                         nacimiento</label>
                                                 </div>
@@ -90,17 +78,65 @@
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="nacionality" name="nacionality"
-                                                        class="form-control form-control-lg" required />
+                                                        autocomplete="off" class="form-control form-control-lg"
+                                                        required />
                                                     <label class="form-label" for="nacionality">Nacionalidad </label>
                                                 </div>
                                             </div>
+                                            <div class="form-outline mb-4">
+                                                <input type="email" id="email" class="form-control form-control-lg"
+                                                    name="email" required />
+                                                <label class="form-label" for="email">Correo electrónico</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="text-opinion">Domicilio</p>
+
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="address" name="calle" autocomplete="off"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="address">Calle y número </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="address" name="colonia" autocomplete="off"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="address">Colonia </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="number" id="address" name="cp" autocomplete="off"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="address">Código postal</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="address" name="ciudad" autocomplete="off"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="address">Ciudad </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="address" name="estado" autocomplete="off"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="address">Estado </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="text-opinion">Documentos</p>
+
+                                        </div>
+                                        <div class="row">
+
                                         </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="email" id="email" class="form-control form-control-lg"
-                                                name="email" required />
-                                            <label class="form-label" for="email">Correo electrónico</label>
-                                        </div>
+
                                         <div class="form-outline mb-4">
                                             <input type="file" multiple id="files" name="files"
                                                 class="form-control form-control-lg" required />

@@ -3,6 +3,7 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const multer = require("multer");
 const nodemailer = require("nodemailer");
+const https = require("https");
 
 const app = express();
 app.use(express.static("public"));
@@ -41,7 +42,6 @@ app.get("/", (req, res) => {
 app.post("/registro", (req, res) => {
   upload(req, res, function (err) {
     if (err) {
-      console.log(err);
       return res.end("Something went wrong!");
     } else {
       path1 = req.files[0].path;
@@ -56,7 +56,16 @@ app.post("/registro", (req, res) => {
       const name = req.body.name;
       const lastName = req.body.lastName;
       const CURP = req.body.CURP;
-      const address = req.body.address;
+      const address =
+        req.body.calle +
+        " " +
+        req.body.colinia +
+        " " +
+        req.body.cp +
+        " " +
+        req.body.ciudad +
+        " " +
+        req.body.estado;
       const phone = req.body.phone;
       const schoolar = req.body.schoolar;
       const placeBorn = req.body.placeBorn;
@@ -64,7 +73,46 @@ app.post("/registro", (req, res) => {
       const email = req.body.email;
       const date = new Date().toLocaleDateString();
 
-      var mensaje = `¡¡Hola Rod!!
+      //-------------MAILCHIMP-----------
+      const data = {
+        members: [
+          {
+            email_address: email,
+            status: "subscribed",
+            merge_fields: {
+              FNAME: name,
+              LNAME: lastName,
+              PHONE: phone,
+            },
+          },
+        ],
+      };
+
+      const jsonData = JSON.stringify(data);
+      const url = "https://us21.api.mailchimp.com/3.0/lists/e3fa8cc903";
+      const options = {
+        method: "POST",
+        auth: process.env.AUTH,
+      };
+      const request = https.request(url, options, function (response) {
+        response.on("data", function (data) {});
+      });
+
+      request.write(jsonData);
+      request.end();
+
+      // request.post(
+      //   {
+      //     headers: { "content-type": "application/x-www-form-urlencoded" },
+      //     url: url,
+      //     body: options,
+      //   },
+      //   function (error, response, body) {
+      //     console.log(body);
+      //   }
+      // );
+
+      const mensaje = `¡¡Hola Rod!!
           Felicidades, ${name} ${lastName} se acaba de inscribir a tu curso.
           Conoce más sobre ${name}:
           Nombre: ${name}
@@ -80,7 +128,6 @@ app.post("/registro", (req, res) => {
           Te recordamos que este es un correo automatizado, para más información, dudas o aclaraciones contacta al equipo de Creativa2020.
           ${date}
         `;
-
 
       var mailOptions = {
         from: "noreplaycreativa2020@gmail.com",
@@ -99,15 +146,15 @@ app.post("/registro", (req, res) => {
 
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-          alert("Se ha producido un error")
         } else {
-          alert("Se ha enviado correctamente el registro")
+          res.sendFile(__dirname + "/registrocorrecto.html");
         }
       });
     }
   });
 });
 
-app.listen(3000, function () {
-  console.log("Server is on");
-});
+app.listen(process.env.PORT || 3000),
+  function () {
+    console.log("Server is running on port 3000");
+  };
