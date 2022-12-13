@@ -8,19 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Registro</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/registerStyles.css">
     <!--W3 SCHOOLS-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-    <section class="h-100 bg-dark">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
+    <section class=" bg-dark">
+        <div class="container py-5 ">
+            <div class="row d-flex justify-content-center align-items-center">
                 <div class="col">
                     <div class="card card-registration my-4">
                         <div class="row g-0">
@@ -29,7 +27,7 @@
                                     <h3 class="mb-5 text-uppercase">¡Únete a la comunidad!</h3>
                                     <form action="/registro" method="POST" enctype="multipart/form-data">
                                         <div class="row">
-                                            <p class="text-opinion">Datos generales</p>
+                                            <!-- <p class="text-opinion">Datos generales</p> -->
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="name" name="name" autocomplete="off"
@@ -53,20 +51,20 @@
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <input type="number" id="phone" name="phone" autocomplete="off"
+                                                    <input type="tel" id="phone" name="phone" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="phone">Teléfono
                                                         celular</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 mb-4">
+                                            <!-- <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="schoolar" name="schoolar" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="schoolar">Escolaridad </label>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
+                                            </div> -->
+                                            <!-- <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="placeBorn" name="placeBorn"
                                                         autocomplete="off" class="form-control form-control-lg"
@@ -74,25 +72,25 @@
                                                     <label class="form-label" for="placeBorn">Lugar de
                                                         nacimiento</label>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
-                                                <div class="form-outline">
+                                            </div> -->
+                                            <!-- <div class="col-md-6 mb-4">
+                                                 <div class="form-outline">
                                                     <input type="text" id="nacionality" name="nacionality"
                                                         autocomplete="off" class="form-control form-control-lg"
                                                         required />
                                                     <label class="form-label" for="nacionality">Nacionalidad </label>
-                                                </div>
-                                            </div>
+                                                </div> 
+                                            </div> -->
                                             <div class="form-outline mb-4">
                                                 <input type="email" id="email" class="form-control form-control-lg"
-                                                    name="email" required />
+                                                    name="email" required autocomplete="off" />
                                                 <label class="form-label" for="email">Correo electrónico</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <p class="text-opinion">Domicilio</p>
+                                        <!-- <div class="row"> -->
+                                        <!-- <p class="text-opinion">Domicilio</p> -->
 
-                                            <div class="col-md-6 mb-4">
+                                        <!-- <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="address" name="calle" autocomplete="off"
                                                         class="form-control form-control-lg" required />
@@ -105,8 +103,8 @@
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="address">Colonia </label>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
+                                            </div> -->
+                                        <!-- <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="number" id="address" name="cp" autocomplete="off"
                                                         class="form-control form-control-lg" required />
@@ -119,30 +117,29 @@
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="address">Ciudad </label>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
+                                            </div> -->
+                                        <!-- <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
                                                     <input type="text" id="address" name="estado" autocomplete="off"
                                                         class="form-control form-control-lg" required />
                                                     <label class="form-label" for="address">Estado </label>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
+                                            </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="row">
                                             <p class="text-opinion">Documentos</p>
 
-                                        </div>
-                                        <div class="row">
+                                        </div> -->
+                                        <!-- <div class="row">
 
-                                        </div>
+                                        </div> -->
 
 
-                                        <div class="form-outline mb-4">
+                                        <!-- <div class="form-outline mb-4">
                                             <input type="file" multiple id="files" name="files"
                                                 class="form-control form-control-lg" required />
                                             <label class="form-label" for="files">Adjuntar INE y CURP</label>
-                                        </div>
-                                        <hr>
+                                        </div> -->
 
                                         <div class="form-check form-check-inline mb-0 me-4">
                                             <label class="form-check-label" for="1" style="font-size: 12px;">AL

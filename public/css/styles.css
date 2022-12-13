@@ -13,7 +13,7 @@ body {
   font-family: montserrat;
 }
 
-.yellow-bg{
+.yellow-bg {
   background: rgb(210, 172, 42);
 }
 
@@ -130,9 +130,19 @@ body {
 
 /*HOME SECTION*/
 .home {
-  background: rgb(210, 172, 42);
-  background: linear-gradient(90deg, rgba(210, 172, 42, 1) 0%, rgba(242, 242, 242, 1) 50%, rgba(210, 172, 42, 1) 100%);
-  padding-top: 55px;
+  /* background: rgb(210, 172, 42); */
+  /* background: linear-gradient(90deg, rgba(210, 172, 42, 1) 0%, rgba(242, 242, 242, 1) 50%, rgba(210, 172, 42, 1) 100%); */
+  padding-top: 60px;
+}
+
+@media (max-width: 1138px) {
+  .home {
+    padding-top: 60px !important;
+  }
+}
+
+/* .home img {
+  width: 100%;
 }
 
 .home .info {
@@ -151,6 +161,26 @@ body {
 .home .info p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 25px;
+} */
+
+.carousel-indicators li{
+  display: none;
+}
+
+.cursosBanner .grid-3 div {
+  padding: 10px;
+}
+
+.cursosBanner .grid-3 i {
+  font-size: 45px;
+  padding-top: 30px;
+}
+
+.cursosBanner h2 {
+  font-size: 1rem;
+  color: black;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* CSS */
@@ -238,7 +268,7 @@ body {
 }
 
 .galery img {
-  width: 100%;
+  width: 70%;
 }
 
 /*BANNER*/
@@ -321,15 +351,16 @@ footer img {
 
 /*RESPONSIVE*/
 @media (max-width: 1138px) {
-  .center-mobile{
+  .center-mobile {
     text-align: center;
   }
-  .right-mobile{
+
+  .right-mobile {
     text-align: right;
   }
 
-  .grid-2{
-    grid-template-columns: repeat(1,1fr);
+  .grid-2 {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .home {
@@ -346,6 +377,25 @@ footer img {
 
   .home .info p {
     font-size: 20px;
+  }
+
+  .cursosBanner .grid-3 div {
+    height: 60px;
+    padding: 0;
+  }
+  .cursosBanner .grid-3 i { 
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .cursosBanner .grid-3 p {
+    display: none;
+  }
+  .cursosBanner .grid-3 h2 {
+    display: none;
+  }
+  .grid-30-70{
+    grid-template-columns: repeat(1,1fr);
   }
 
   .big-text {
@@ -366,7 +416,8 @@ footer img {
   .courses {
     grid-template-columns: repeat(1, 1fr);
   }
-  iframe{
+
+  iframe {
     width: 90%;
   }
 
