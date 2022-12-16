@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!--Ícono-->
     <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
     <!--STYLESHEET LINK-->
@@ -52,7 +55,7 @@
                     éxito</a>
                 <a href="#courses" class="w3-bar-item w3-button"><i class="fa-solid fa-book"></i> Cursos</a>
                 <a href="#podcast" class="w3-bar-item w3-button"><i class="fa-solid fa-podcast"></i> Podcast</a>
-                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contacto</a>
+                <a href="#newsletter" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contacto</a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -72,13 +75,13 @@
         <hr>
         <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
         <hr>
-        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Historias de éxito</a>
+        <a href="#HistoriasDeExito" onclick="w3_close()" class="w3-bar-item w3-button">Historias de éxito</a>
         <hr>
         <a href="#courses" onclick="w3_close()" class="w3-bar-item w3-button">Cursos</a>
         <hr>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Rodcast</a>
+        <a href="#podcast" onclick="w3_close()" class="w3-bar-item w3-button">Podcast</a>
         <hr>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
+        <a href="#newsletter" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
         <hr>
         <div class="w3-center">
             <a href="https://www.facebook.com/cursosdeoptometria" class="no-textDecoration" target="_blank">
@@ -117,22 +120,28 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/portada1.png" class="d-block h-75 w-100" alt="...">
+                <div class="carousel-item active ">
+                    <a href="/registro"> <img src="img/portada1.png" class="d-block h-75 w-100" alt="..."></a>
+
                     <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
                     </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img src="img/portada2.png" class="d-block h-75 w-100" alt="...">
+                    <a href="#HistoriasDeExito">
+                        <img src="img/portada3.png" class="d-block h-75 w-100" alt="...">
+                    </a>
+
                     <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
                     </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img src="img/portada3.png" class="d-block h-75 w-100" alt="...">
+                    <a href="#podcast">
+                        <img src="img/portada2.png" class="d-block h-75 w-100" alt="...">
+                    </a>
                     <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
@@ -152,32 +161,35 @@
 
     <section class="cursosBanner">
         <div class="grid-3">
-            <div class="grid-30-70 w3-yellow">
+            <div class="grid-30-70 w3-yellow animate__animated animate__bounceInLeft">
                 <div>
                     <i class="fi fi-tr-grin-stars w3-right"></i>
                 </div>
                 <div class="w3-right">
-                    <h2>Cursos de optometría</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Certificación en examen de refracción</h2>
+                    <p>Prepárate para presentar el proceso de evaluación con fines de certificacion de Conocer.</p>
                 </div>
             </div>
-            <div class="grid-30-70 w3-yellow">
+            <div class="grid-30-70 w3-yellow animate__animated animate__bounceInUp">
                 <div>
-                    <i class="fi fi-tr-grin-stars w3-right"></i>
+                    <!-- <i class="fi fi-tr-grin-stars w3-right"></i> -->
+                    <img src="img/testing-glasses.png" alt="" class="w3-right">
                 </div>
                 <div class="w3-right">
-                    <h2>Cursos de optometría</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Control de miopía</h2>
+                    <p>.</p>
                 </div>
             </div>
-            <!-- style="background-color: #FDBA3A" -->
-            <div class="grid-30-70 w3-yellow">
+            <div class="grid-30-70 w3-yellow animate__animated  animate__bounceInRight">
                 <div>
-                    <i class="fi fi-tr-grin-stars w3-right"></i>
+                    <!-- <i class="fi fi-tr-grin-stars w3-right"></i> -->
+                    <img src="img/contact-lens.png" alt="" class="w3-right">
+
                 </div>
                 <div class="w3-right">
-                    <h2>Cursos de optometría</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Adaptación al lente de contacto</h2>
+                    <p>Realiza la adaptación de la lente de contacto de manera segura, al contar con una amplia y
+                        completa formación.</p>
                 </div>
             </div>
         </div>
@@ -231,15 +243,18 @@
                 </div>
             </div>
 
-            <div class="w3-center" id="podcast">
-                <iframe class="podcast"
-                    src="https://open.spotify.com/embed/show/50CUsvpg2vD3pHPqy2l3Cb?utm_source=generator" width="100%"
-                    height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
         </div>
     </section>
+
+    <!-- <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" class="up-10px" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 123,236.07142857142858 246,272.14285714285717 381,267 C 516,261.85714285714283 663,215.50000000000003 784,216 C 905,216.49999999999997 1000,263.85714285714283 1105,269 C 1210,274.14285714285717 1325,237.07142857142858 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#707070" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg> -->
+
+    <div class="w3-center" id="podcast">
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/6E98HzpS4uffBFbZkxDYVk?utm_source=generator&theme=0"
+            width="100%" height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
 
     <!-- <div class="banner animated tada">
         <div class=" big-text animated tada">95% DE DESCUENTO</div>
@@ -255,71 +270,77 @@
         <div class="text-container w3-center w3-padding-16">
             <h1 class="title-text">Cursos</h1>
         </div>
-        <!-- <div class="courses">
-            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge w3-center w3-row">
-                <div class="w3-half w3-padding">
-                    <img src="img/rod-ensenando.JPG" class="w3-round img-full" alt="Rod Castañeda enseñando">
-                </div>
-                <h2>Cursos de optometría</h2>
-                <p class="text-justify">Proceso de evaluación con fines de <b>certificación</b>
-                    oficial <b>CONOCER</b>, junto
-                    con el curso de <b>alineación</b> (para todos aquellos que ya tenían un conocimiento previo de
-                    optometría).
-                    <br>
-                    Así mismo se implementa un <b>“Estándar de
-                        Competencia”</b> cuyo objetivo general es servir como referente para la evaluación y
-                    certificación de
-                    las
-                    personas que realizan exámenes de refracción en el país considerando:
-                </p>
-                <ul class="w3-left-align">
-                    <li> Los antecedentes visuales del cliente</li>
-                    <li> La realización de pruebas preliminares de el examen de refracción</li>
-                    <li> La determinación del estado refractivo de los ojos</li>
-                    <li> El ofrecimiento de alternativas de solución visual</li>
-                </ul>
-                <p class="text-justify">
-                    En Cursos de Optometría quisimos llevar nuestros estudios a otro nivel teniendo un estándar mejorado
-                    con
-                    grado
-                    quirúrgico.
-                </p>
 
-                </p>
-            </div>
-            <div class=" w3-card-2 w3-margin w3-padding w3-round-xxlarge w3-center w3-row">
-                <div class="w3-half w3-padding">
-                    <img src="/img/rod-wow.jpg" class="w3-round img-full" alt="Rod Castañeda sorprendido">
-                </div>
-                <h2>Experiencia WOW</h2>
-                <p class="text-justify">Curso <b>exclusivo</b> que se realiza una vez al año,
-                    orientado a todos esos
-                    dueños de ópticas que buscan ser diferentes.
-                    <br>
-                    Nace en un viaje dónde la aerolínea de Rod Castañeda canceló su vuelo de último momento,
-                    ofreciéndole la
-                    oportunidad de quedarse en un hotel donde al ver la buena atención que recibió decidió que
-                    podía llevar esa experiencia a todas las ópticas.
-                    <br><br>
-                    La <b>experiencia WOW</b> ha tenido tan buenos resultados que los empresarios que lo han
-                    tomado
-                    han tenido un ingreso superior a lo que tenían en ventas.
-                </p>
-            </div>
-        </div> -->
+        <section id="cursos" class="grid-3 w3-center">
+            <div class="">
+                <img src="img/refraccion.png" alt="">
 
-        <div class="w3-margin">
-            <div class="w3-margin grid-3">
-                <div>lol</div>
-                <div>lol</div>
-                <div>lol</div>
-            </div>
+                <h4>Certificación en examen de refracción</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nesciunt corrupti commodi
+                    recusandae esse praesentium iste veritatis sunt hic!
+                </p>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
 
-        </div>
+                <button class="cta">
+                    <span>Ver mas</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <img src="img/miopia.png" alt="">
+
+                <h4>Control de miopía</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nesciunt corrupti commodi
+                    recusandae esse praesentium iste veritatis sunt hic!
+                </p>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+
+                <button class="cta">
+                    <span>Ver mas</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <img src="img/lenteDeContacto.png" alt="">
+
+                <h4>Adaptación al lente de contacto</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nesciunt corrupti commodi
+                    recusandae esse praesentium iste veritatis sunt hic!
+                </p>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+                <h5>info</h5>
+
+                <button class="cta">
+                    <span>Ver mas</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
 
     </section>
 
-    <section id="HistoriasDeExito">
+    <section id="HistoriasDeExito" class="mb-5">
         <div class="container mt-5 w3-margin-bottom">
             <div class="text-container w3-center w3-padding-16">
                 <h1 class="title-text">Historias de éxito</h1>
@@ -329,7 +350,8 @@
             <div class="w3-center"> <iframe width="560" height="315" src="https://www.youtube.com/embed/fEk6Ez8TJ2c"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
+                    allowfullscreen></iframe>
+            </div>
             <div>
                 <div class="w3-margin">
                     <p class="text-opinion text-justify">"Nos ha ayudado a que nuestros clientes tengan una experiencia
@@ -342,17 +364,20 @@
         </div>
     </section>
 
-    <section>
+    <section id="newsletter">
         <div class="mainPart2">
             <div class="text-container w-100">
                 <h1>Registro</h1>
                 <p>Suscríbete gratis a nuestro portal de noticias</p>
+                <p>Para mas informacion, dudas u otros, contacta a hola@rodolfocastaneda.com</p>
+
                 <form action="/" method="POST">
                     <input class="form-control form-control-lg w3-half" name="email" type="email" id="email" required
                         autocomplete="off" placeholder="@email.com" />
                     <button type="submit" class="w3-btn w3-yellow ">Suscribirme</button>
                 </form>
             </div>
+
         </div>
     </section>
 
@@ -389,7 +414,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         // Toggle between showing and hiding the sidebar when clicking the menu icon
         var mySidebar = document.getElementById("mySidebar");

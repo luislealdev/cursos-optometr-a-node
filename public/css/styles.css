@@ -20,19 +20,24 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url('../img/loader.png') 50% 50% no-repeat rgb(249,249,249);
+  background: url('../img/loaderWeb.png') 50% 50% no-repeat rgb(249, 249, 249);
   opacity: 1;
 }
 
 .yellow-bg {
   background: rgb(210, 172, 42);
 }
-
+.grey-bg{
+  background-color: #707070;
+}
+.up-10px{
+  position: relative;
+  top: 10px;
+}
 .text-opinion {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 26px;
+  font-size: 36px;
 }
-
 .box-shadow {
   box-shadow: 10px 10px;
 }
@@ -96,20 +101,18 @@ body {
   font-family: "Playfair Display", Arial, serif;
 }
 
-.center-father {
-  position: relative;
-}
-
-.center-son {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.pb-20{
+  padding-bottom: 20px;
 }
 
 /*NAVBAR*/
 #myNavbar {
   background-color: black;
+}
+#myNavbar a:hover{
+  background-color: #ffeb3b !important;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 #myNavbar img {
@@ -150,6 +153,21 @@ body {
   .home {
     padding-top: 60px !important;
   }
+
+  .cursosBanner .grid-3 {
+    display: none;
+  }
+  #cursos{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .loader {
+    background: url('../img/loaderMovil.png') 50% 50% no-repeat rgb(249, 249, 249);
+  }
+  .grid-3{
+    grid-template-columns: repeat(1,1fr);
+  }
 }
 
 /* .home img {
@@ -174,7 +192,7 @@ body {
   font-size: 25px;
 } */
 
-.carousel-indicators li{
+.carousel-indicators li {
   display: none;
 }
 
@@ -185,6 +203,11 @@ body {
 .cursosBanner .grid-3 i {
   font-size: 45px;
   padding-top: 30px;
+}
+
+.cursosBanner .grid-3 img {
+  width: 60px;
+  padding-top: 20px;
 }
 
 .cursosBanner h2 {
@@ -326,25 +349,107 @@ body {
 
 /*COURSES*/
 
-.courses {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+#cursos {
+  margin-right: 300px;
+  margin-left: 300px;
 }
 
-.courses img {
-  max-width: 40vw;
+#cursos div {
+  background-color: #F2F2F2;
+  margin: 25px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px 5px #dadada;
+  /* box-shadow: 2px 2px 5px 5px #ffeb3b; */
+}
+#cursos div:hover{
+    box-shadow: 2px 2px 5px 5px #ffeb3b;
 }
 
-.courses h2 {
-  font-size: 25px;
-  font-weight: 600;
-  text-align: center;
+#cursos div img {
+  margin: 0;  
+  width: 60%;
+  border-radius: 15px;
 }
 
-.courses p {
-  font-size: 16px;
+#cursos h4{
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom:20px ;
+  font-weight: bolder;
 }
+#cursos p{
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+#cursos h5{
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+#cursos div {
+  background-color: white;
+  padding: 10px;
+}
+
+/*ANIMATED BUTTON FOR SEE MORE*/
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+ }
+ 
+ .cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #ffeb3b;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+ }
+ 
+ .cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: black;
+ }
+ 
+ .cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: black;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+ }
+ 
+ .cta:hover:before {
+  width: 100%;
+  background: #ffeb3b;
+ }
+ 
+ .cta:hover svg {
+  transform: translateX(0);
+ }
+ 
+ .cta:active {
+  transform: scale(0.95);
+ }
 
 footer {
   display: grid;
@@ -394,7 +499,8 @@ footer img {
     height: 60px;
     padding: 0;
   }
-  .cursosBanner .grid-3 i { 
+
+  .cursosBanner .grid-3 i {
     text-align: center;
     padding-top: 0;
   }
@@ -402,11 +508,13 @@ footer img {
   .cursosBanner .grid-3 p {
     display: none;
   }
+
   .cursosBanner .grid-3 h2 {
     display: none;
   }
-  .grid-30-70{
-    grid-template-columns: repeat(1,1fr);
+
+  .grid-30-70 {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .big-text {
@@ -423,6 +531,7 @@ footer img {
   .banner a {
     font-size: 15px;
   }
+
 
   .courses {
     grid-template-columns: repeat(1, 1fr);

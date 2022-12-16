@@ -94,10 +94,11 @@ app.post("/registro", (req, res) => {
       // const placeBorn = req.body.placeBorn;
       // const nacionality = req.body.nacionality;
       const email = req.body.email;
+      const curso = req.body.queCurso;
       const date = new Date().toLocaleDateString();
 
       var mensaje = `¡¡Hola Rod!!
-          Felicidades, ${name} ${lastName} se acaba de inscribir a tu curso.
+          Felicidades, ${name} ${lastName} se acaba de inscribir a tu curso de ${curso}.
           Conoce más sobre ${name}:
           Nombre: ${name}
           Apellido: ${lastName}
