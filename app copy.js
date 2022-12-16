@@ -69,11 +69,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/registro", (req, res) => {
-  upload(req, res, function (err) {
-    if (err) {
-      console.log(err);
-      return res.end("Something went wrong!");
-    } else {
       // path1 = req.files[0].path;
       // path2 = req.files[1].path;
       var transporter = nodemailer.createTransport({
@@ -138,8 +133,7 @@ app.post("/registro", (req, res) => {
         }
       });
     }
-  });
-});
+);
 
 app.listen(3000, function () {
   console.log("Server is on");
