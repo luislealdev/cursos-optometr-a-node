@@ -51,6 +51,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.grid-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
 .grid-30-70 {
   display: grid;
@@ -153,8 +157,7 @@ body {
   .home {
     padding-top: 60px !important;
   }
-
-  .cursosBanner .grid-3 {
+  .cursosBanner .grid-4 {
     display: none;
   }
   #cursos{
@@ -166,6 +169,9 @@ body {
     background: url('../img/loaderMovil.png') 50% 50% no-repeat rgb(249, 249, 249);
   }
   .grid-3{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .grid-4{
     grid-template-columns: repeat(1,1fr);
   }
 }
@@ -196,16 +202,16 @@ body {
   display: none;
 }
 
-.cursosBanner .grid-3 div {
+.cursosBanner .grid-4 div {
   padding: 10px;
 }
 
-.cursosBanner .grid-3 i {
+.cursosBanner .grid-4 i {
   font-size: 45px;
   padding-top: 30px;
 }
 
-.cursosBanner .grid-3 img {
+.cursosBanner .grid-4 img {
   width: 60px;
   padding-top: 20px;
 }
@@ -352,8 +358,8 @@ body {
 
 
 #cursos {
-  margin-right: 300px;
-  margin-left: 300px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 #cursos div {
@@ -464,9 +470,89 @@ footer img {
   width: 250px;
 }
 
+/*RESPONSIVE*/
+@media (max-width: 1200px) {
+  .center-mobile {
+    text-align: center;
+  }
+
+  .right-mobile {
+    text-align: right;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home {
+    padding-top: 70px;
+  }
+
+  .home .info {
+    padding: 20px;
+  }
+
+  .home .info h3 {
+    font-size: 27px;
+  }
+
+  .home .info p {
+    font-size: 20px;
+  }
+
+  .cursosBanner .grid-3 div {
+    height: 60px;
+    padding: 0;
+  }
+
+  .cursosBanner .grid-3 i {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .cursosBanner .grid-3 p {
+    display: none;
+  }
+
+  .cursosBanner .grid-3 h2 {
+    display: none;
+  }
+
+  .grid-30-70 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .big-text {
+    font-size: 30px;
+  }
+
+  .banner input {
+    width: 90%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .banner a {
+    font-size: 15px;
+  }
+
+
+  #cursos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  iframe {
+    width: 90%;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /*RESPONSIVE*/
-@media (max-width: 1138px) {
+@media (max-width: 570px ) {
   .center-mobile {
     text-align: center;
   }
@@ -533,7 +619,7 @@ footer img {
   }
 
 
-  .courses {
+  #cursos {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -544,7 +630,4 @@ footer img {
   footer {
     grid-template-columns: repeat(1, 1fr);
   }
-
-
-
 }
