@@ -30,6 +30,9 @@ body {
 .grey-bg{
   background-color: #707070;
 }
+.white-bg{
+  background-color: white;
+}
 .up-10px{
   position: relative;
   top: 10px;
@@ -152,6 +155,7 @@ body {
   /* background: linear-gradient(90deg, rgba(210, 172, 42, 1) 0%, rgba(242, 242, 242, 1) 50%, rgba(210, 172, 42, 1) 100%); */
   padding-top: 60px;
 }
+
 
 @media (max-width: 1138px) {
   .home {
@@ -353,10 +357,27 @@ body {
   padding: 15px 20px;
 }
 
+#cursoespecial{
+  background-image: url("../img/fondoLentes.png");
+  padding: 5px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#cursoespecial h2{
+  color: orange;
+  margin: 2px;
+}
+#cursoespecial h2 span{
+  font-weight: bold;
+}
+#cursoespecial h1{
+  font-size: 170px;
+}
+#cursoespecial h1 span{
+  font-size: 50px;
+}
+
 /*COURSES*/
-
-
-
 #cursos {
   margin-right: 100px;
   margin-left: 100px;
