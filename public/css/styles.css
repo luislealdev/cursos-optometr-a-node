@@ -365,6 +365,7 @@ body {
   background-image: linear-gradient( rgba(60, 60, 60, 0.80), rgba(60, 60, 60, 0.80)), url("../img/fondoLentes.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  height: 500px;
 }
 #cursoespecial .div-img{
   position: relative;
@@ -395,6 +396,10 @@ body {
 #cursoespecial .firma{
   position: relative;
   bottom: 200px;
+}
+#cursoespecial .anualCourseText{
+  width: 800px;
+  position:absolute;
 }
 
 /*COURSES*/
