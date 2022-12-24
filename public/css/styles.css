@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
+@font-face {
+  font-family: antry-sans;
+  src: url('../fonts/AntrySans.otf');
+}
 html {
   scroll-behavior: smooth;
 }
@@ -358,23 +361,40 @@ body {
 }
 
 #cursoespecial{
-  background-image: url("../img/fondoLentes.png");
-  padding: 5px;
+  /* background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("../img/fondoLentes.png"); */
+  background-image: linear-gradient( rgba(60, 60, 60, 0.80), rgba(60, 60, 60, 0.80)), url("../img/fondoLentes.png");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+#cursoespecial .div-img{
+  position: relative;
+  right:0px;
 }
 #cursoespecial h2{
   color: orange;
   margin: 2px;
+  margin-top: 15px;
 }
 #cursoespecial h2 span{
   font-weight: bold;
 }
 #cursoespecial h1{
   font-size: 170px;
+  font-family: antry-sans;
+  color: white;
+  letter-spacing: 5px;
 }
 #cursoespecial h1 span{
   font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  position: relative;
+  top: -150px;
+  letter-spacing: 2px;
+}
+#cursoespecial .firma{
+  position: relative;
+  bottom: 200px;
 }
 
 /*COURSES*/
